@@ -1,5 +1,5 @@
 /*------ Home Page ------*/
-#main{
+#home-main{
 	top:0%;
 
 	background-image: url("../images/home-bg.jpg");
@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
 }
 
-#main p{
+#home-main p{
 	font-family: "Lato";
   	font-weight: 200;
   	font-style: normal;
@@ -22,12 +22,12 @@
 	color: #dddddd;
 }
 
-#main p span{
+#home-main p span{
 	font-size: 40px;
 	font-weight: 500;
 }
 
-#main img{
+#home-main img{
 	position: absolute;
 	width:180px;
 	height:180px;
@@ -39,31 +39,31 @@
     min-height:180px;
 }
 
-#main .list{
+#home-main .list{
 	background-color: rgba(255,255,255,0.3);
 }
 
-#main .list > li {
+#home-main .list > li {
 	background-color: rgba(255,255,255,0.3);
 }
 
-#main a{
+#home-main a{
 	min-width: 100px;
 	max-width: 180px;
 }
 
-#main section{
+#home-main section{
 	position: absolute;
 	top: 35%;
 	background-color: rgba(255,255,255,0)
 }
 
-#main li{
+#home-main li{
 	text-align: center;
 	margin-right: 0;
 }
 
-#main h3{
+#home-main h3{
 	width:100%;
 	color:black;
 }
