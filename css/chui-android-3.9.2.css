@@ -609,7 +609,7 @@ nav > button:last-child {
   margin-right: 0 !important;
 }
 nav > h1 {
-  text-align: left;
+  text-align: center;
   display: inline-block;
   margin: 0 16px 0 0;
   -webkit-box-flex: 1 !important;
