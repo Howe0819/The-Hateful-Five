@@ -1,41 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="msapplication-tap-highlight" content="no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="msapplication-tap-highlight" content="no">
 
-  <title>myProfile</title>
+	<title>myProfile</title>
 
-  <link rel="stylesheet" href="../css/chui-android-3.9.2.css">
-  <link rel="stylesheet" href="../css/....."> //
+	<link rel="stylesheet" href="../css/chui-android-3.9.2.css">
 
-  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="../chocolatechip-ui-master-package/chui/chui-3.9.2.js"></script>
+	<script src="../chocolatechip-ui-master-package/chui/chui-3.9.2.js"></script>
 
-  <script src="../js/jquery-2.2.0.js"></script>
-  <script src="../js/chocolatechipjs-4.0.4.min.js"></script>
-  <script src="../js/main.js"></script>
+	<script src="../js/jquery-2.2.0.js"></script>
+	<script src="../js/chocolatechipjs-4.0.4.min.js"></script>
+	<script src="../js/main.js"></script>
 
-  <script src="../package/font-awesome-4.5.0/css/font-awesome.css"></script>
-  <script src="../package/font-awesome-4.5.0/css/font-awesome.min.css"></script>
+	<link rel="stylesheet" href="../package/font-awesome-4.5.0/css/font-awesome.css">
+	<link rel="stylesheet" href="../package/font-awesome-4.5.0/css/font-awesome.min.css">
 
-  <style>
-    .toolbar > .button {
-      display: block;
-      width: auto;
-      margin: 0 10px 0 0;
-    }
-  </style>
+	<script src="../package/font-awesome-4.5.0/css/font-awesome.css"></script>
+	<script src="../package/font-awesome-4.5.0/css/font-awesome.min.css"></script>
+
+	<script>
+	$(function() {
+		$.UISlideout();
+		$.UISlideout.populate([{music:'Music'},{pictures:'Pictures'},{recipes:'Recipes'},{fruits:'Fruits'}]);
+	});
+	</script>
+
+	<style>
+	.toolbar > button {
+		display: block;
+		width: auto;
+		margin: 0 10px 0 0;
+		margin-left: 15px;
+	}
+	</style>
+
+	<style>
+	.col {
+		color: #000;
+		padding: 20px 10px;
+		padding: 10px;
+		text-align: center;
+	}
+	.col p {
+		margin: 0;
+	}
+	.fixed1 {
+		-webkit-box-flex: none;
+		-webkit-flex: none;
+		-ms-flex: none;
+		flex: none;
+		width: 400px;
+		background-color: #eee !important;
+	}
+	.fixed2 {
+		-webkit-box-flex: none;
+		-webkit-flex: none;
+		-ms-flex: none;
+		flex: none;
+		width: 300px;
+		background-color: #eee !important;
+	}
+
+	@media all and (max-width: 599px) {
+		.fixed1, .fixed2 {
+			width: auto;
+		}
+	}
+	.isWindows .grid > .col > p {
+		color: #000 !important;
+	}
+	.isWindows h2 {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	</style>
+
+	<style>
+	/* Fix for Native Browser on Android, ugh! */
+	body.isNativeAndroidBrowser .sheet > section > ul > li > button.action {
+		width: 100% !important;
+	}
+	</style>
 
 </head>
 
 <body>
-	<div class="toolbar current">
-    	<button>Main Button 1</button>
-    	<button>Main Button 2</button>
-  	</div>
+	<nav id="global-nav">
+		<h1> My Profile </h1>
+		<button class="slide-out-button"></button>
+	</nav>
+
+	<div class="slide-out"><section><ul class="list"><li data-show-article="music" class=""><h3>Music</h3></li><li data-show-article="pictures"><h3>Pictures</h3></li><li data-show-article="recipes" class=""><h3>Recipes</h3></li><li data-show-article="contacts" class=""><h3>Contacts</h3></li></ul></section></div>
+
+
+	<article id='main'>
+		<section>
+			<ul class='list'>
+				<li class='comp'>
+					<aside>
+						<img title='Imagine Dragons' src="../chocolatechip-ui-master-package/images/music/Imagine Dragons.jpg" height="100px">
+					</aside>
+					<div>
+						<h3>Radiohead</h3>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half"></i>
+						<br></br>
+						<p>Hey we are Radiohead and we are feeling cool. Stuipid guys eh I mean you. And the profile piecture ain't mine =. = </p>
+
+					</div>    
+				</li>
+			</ul> 
+
+			<ul class='list'>
+				<li class="nav" data-goto="myTrip">
+          			<h4>My Trip</h4>
+        		</li>
+				<li class="nav" data-goto="Setting">
+          			<h4>Setting</h4>
+        		</li>
+        		<li class="nav" data-goto="aboutMe">
+          			<h4>About Me</h4>
+        		</li>
+        		<li class="nav" data-goto="contact">
+          			<h4>Contact</h4>
+        		</li>
+			</ul>
+		</section>
+
+		<div class="toolbar current">
+	<button ><i class="fa fa-home fa-2x"></i> &nbsp;</button>
+	<button ><i class="fa fa-envelope fa-2x"></i>&nbsp;</button>
+	<button ><i class="fa fa-plus-square fa-2x"></i>&nbsp; </button>
+	<button ><i class="fa fa-user fa-2x"></i>&nbsp; </button>
+</div>
+	</article>
+
+	
+
+
+
+
+
+
+
+
 </body>
 </html>
