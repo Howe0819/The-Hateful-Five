@@ -43,8 +43,24 @@
     <section>
     <img style="width:200px; margin-left:24%;" src="../images/upload.png"></img>
       <form id='userForm' action='javascript:submitForm()'>
-        <h2>Travel Info:</h2>
+        <h2 style="text-align:center">Travel Info</h2>
         <ul class='list'>
+        <li class='comp'>
+             <div>
+              <h3>Title:</h3>
+             </div>
+            <aside>
+              <input type='text' name='user.phone'>
+            </aside>
+           </li>
+           <li class='comp'>
+             <div>
+              <h3>Slogan:</h3>
+             </div>
+            <aside>
+              <input type='text' name='user.phone'>
+            </aside>
+           </li>
           <li class='comp'>
             <div>
               <h3>Origin:</h3>
@@ -579,11 +595,11 @@
            </li>
         
         <div></div>
-        <h2>Details:</h2>
+        <h2 style="text-align:center">Details</h2>
         <ul class='list'>
           <li class='comp'>
             <div>
-              <h3>Travel Route:</h3>
+              <h3>Travel Route Details:</h3>
              </div>
             <aside>
               <textarea style="height: 100px; border:solid 1px black; border-color: #aaaaaa"></textarea>
@@ -592,7 +608,7 @@
           <li class='comp'>
             <div>
               <div>
-                <h3>Duration:<span id='rangeValue2' class='attentionGrapper'></span> hours(approximately)</h3>        
+                <h3>Duration:<span id='rangeValue2' class='attentionGrapper'></span> days(approximately)</h3>        
                 <input type="range" id="rangeControl2" value="10" min="0" max="40">
               </div>
              </div>
